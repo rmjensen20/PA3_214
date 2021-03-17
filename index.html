@@ -1,0 +1,73 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<head>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css" >
+
+    <div class="inj">
+        <p>Enter a number: <input type="text" name="user"></p>
+    </div>
+    <div  class="keep">
+        <button >click</button>
+        
+
+
+    </div>
+   
+    <script>
+    $("button").click(function(){
+         var max = $("input:text").val();
+    });
+
+    
+    $(document).ready(function() {
+        $("button").click(function(){
+         var max = $("input:text").val();
+            if (max >20){
+                greeting = "Good day";
+            }else{
+
+            var table= $("#multiplicationTable");
+            var row2add="";
+            
+            for (var x=1; x<=max; x++)
+            {
+                row2add="<tr>";
+                
+                for (var y=1; y<=max; y++)
+                {
+                    row2add += "<td>" + x*y + "</td>"; 
+                }
+                row2add += "</tr>";
+                
+                table.append(row2add);
+            }
+            
+            $("tr:even").addClass("even");
+            $("tr:odd").addClass("odd");
+            $("td:even").addClass("even");
+            $("td:odd").addClass("odd");
+            
+            };
+        });
+    });
+    </script>
+    
+    </head>
+
+    
+    <body >
+        
+        <div class="yolo">
+            
+                <table id="multiplicationTable" style="margin: auto ; margin-top: 50px; "></table>
+        </div>
+    
+    </body>
+
+    
+</html>
+    

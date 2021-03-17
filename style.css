@@ -1,0 +1,30 @@
+td { margin: auto; 
+    width: 2em;
+    }
+    
+    tr.even td.even { background-color: #ee22bb;
+    }
+    
+    tr.even td.odd { background-color: #00ffbb;
+    }
+    
+    tr.odd td.even { background-color: #ee44cc;
+    }
+    
+    tr.odd td.odd { background-color: #7799dd;
+    }
+
+.yolo{
+     margin: auto;
+}
+
+ .inj{
+    text-align: center;
+    margin-top: 50px;
+ }
+
+ .keep{
+    text-align: center;
+ }
+
+ 
