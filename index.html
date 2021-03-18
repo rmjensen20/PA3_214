@@ -52,8 +52,26 @@
             $("td:odd").addClass("odd");
             
             };
-        });
+    (function(){
+        var counter = $("input:text").val();
+        counter++;
+        setInterval(function() {
+            counter--;
+            if (counter >= 0) {
+                span = document.getElementById("count");
+                span.innerHTML = counter;
+            }
+            if (counter === 0) {
+                alert('Times up!');
+                clearInterval(counter);
+            }
+    
+        }, 1000);
+    
+    })();
+
     });
+});
     </script>
     
     </head>
@@ -64,10 +82,10 @@
         <div class="yolo">
             
                 <table id="multiplicationTable" style="margin: auto ; margin-top: 50px; "></table>
+                <p>You have <span id="count">... </span> seconds</p>
         </div>
     
     </body>
 
     
 </html>
-    
